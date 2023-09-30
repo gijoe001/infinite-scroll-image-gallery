@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* attribute selector to make hidden work with flex-box */
+[hidden]{
+    display:none !important;
+  }
+
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+    min-height: 100svh;
+    margin-inline: 15px;
+    font-family: 'Playfair Display', serif;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+}
+.title h1 {
+    font-size: 40px;
+    text-align: center;
+    /* letter-spacing: 2px; */
+    font-weight: 400;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* image container */
+.image-container {
+    max-width: 80%;
+    columns: 3;
+    gap: 10px;
+    margin: auto;
+}
+.image-container img {
+    flex-grow: 1;
+    min-height: 100px;
+    max-width: 100%;
+    margin-top: 5px;
+}
+
+
+/* media Queries */
+@media  screen and (max-width:1024px) {
+    .image-container {
+        max-width: 90%;
+        columns: 2;
+    }
+}
+@media  screen and (max-width:767px) {
+    .image-container {
+        max-width: 95%;
+        columns: 1;
+    }
+}
